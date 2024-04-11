@@ -17,15 +17,26 @@ spec:
         apiSecurity:
           enabled: false
         cdr:
-          enabled: false
+          enabled: true
       mgmtHostname: "portshift.panoptica.app"
+      panopticaCDR:
+        clusterID: cluster-d1d2f517-d84f-47d3-b959-5cd015a20ea5
+        initialToken: 76f23d3e-14a5-4b3d-97c0-2c737e8c6e42
+        wheelAgent:
+          serverAddress: wheel.dragonfly-prod-1.prod.panoptica.app
+        fluentbitAggregator:
+          output:
+            otel:
+              collectorAddress: otel-collector.dragonfly-prod-1.prod.panoptica.app
+        artServer:
+          address: art.dragonfly-prod-1.prod.panoptica.app
 
     kubernetes-integration-deployment-controller:
       api:
         url: "us1.deploymentmanager.panoptica.app"
 
       secret:
-        token: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2F1dGgua2lzLnBhbm9wdGljYS5pbyIsInN1YiI6ImFkYzo4MzQxNmFkYy01N2FiLTRkOWItYmIxMS01Yjg0MTYzMmQ4OWMiLCJhdWQiOlsiL2ludGVncmF0aW9ucy84MzQxNmFkYy01N2FiLTRkOWItYmIxMS01Yjg0MTYzMmQ4OWMiLCIvcmVsZWFzZXMiXSwic2NwIjpbImlhbS5nbG9iYWwucGFub3B0aWNhLms4c2NsdXN0ZXJzZXJ2aWNlLmludGVncmF0aW9ucy5kZXBsb3ltZW50Om1hbmFnZSIsImlhbS5nbG9iYWwucGFub3B0aWNhLms4c2NsdXN0ZXJzZXJ2aWNlLmludGVncmF0aW9uczpyZWFkIiwiaWFtLmdsb2JhbC5wYW5vcHRpY2EuazhzY2x1c3RlcnNlcnZpY2UuaW50ZWdyYXRpb25zOm1hbmFnZSIsImlhbS5nbG9iYWwucGFub3B0aWNhLms4c2NsdXN0ZXJzZXJ2aWNlLnJlbGVhc2VzOnJlYWQiXSwidGVuYW50IjoiNGQ4MjBmYTAtMzJjMC00OGE1LTllOWMtNTFhNjRkYjUyOWU4In0.t1biRF9mC-Zz8iQ-JOhi64PY40HgwKgpAcat7sJ2JjKnK5A7aLLT4RUTTc01_CgxjRhstpFu3lBQSNPhpuFNQA
+        token: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2F1dGgua2lzLnBhbm9wdGljYS5pbyIsInN1YiI6ImFkYzo4MzQxNmFkYy01N2FiLTRkOWItYmIxMS01Yjg0MTYzMmQ4OWMiLCJhdWQiOlsiL2ludGVncmF0aW9ucy84MzQxNmFkYy01N2FiLTRkOWItYmIxMS01Yjg0MTYzMmQ4OWMiLCIvcmVsZWFzZXMiXSwic2NwIjpbImlhbS5nbG9iYWwucGFub3B0aWNhLms4c2NsdXN0ZXJzZXJ2aWNlLmludGVncmF0aW9ucy5kZXBsb3ltZW50Om1hbmFnZSIsImlhbS5nbG9iYWwucGFub3B0aWNhLms4c2NsdXN0ZXJzZXJ2aWNlLmludGVncmF0aW9uczpyZWFkIiwiaWFtLmdsb2JhbC5wYW5vcHRpY2EuazhzY2x1c3RlcnNlcnZpY2UuaW50ZWdyYXRpb25zOm1hbmFnZSIsImlhbS5nbG9iYWwucGFub3B0aWNhLms4c2NsdXN0ZXJzZXJ2aWNlLnJlbGVhc2VzOnJlYWQiXSwidGVuYW50IjoiNGQ4MjBmYTAtMzJjMC00OGE1LTllOWMtNTFhNjRkYjUyOWU4In0.KOS2yKQBVeafdjLuorCnOLxMParuLld45xkgsvlDiTdvlnjZ-IIApMRkZKkGuD0CQcauLeQXHuis9PrlFGdfiw
 
       syncIntegrationJob:
         api:
