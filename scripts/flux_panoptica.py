@@ -10,6 +10,7 @@ dotenv.load_dotenv()
 PANOPTICA_API_KEY = os.getenv('PANOPTICA_TOKEN')
 
 kustomize="""
+---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: panoptica
